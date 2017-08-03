@@ -10,18 +10,257 @@ ms.product: azure
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: 
-ms.date: 05/18/2017
-ms.openlocfilehash: 97a23180a1fc65d96fdc9dbdffcbe3501a4c4c2a
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.date: 07/26/2017
+ms.openlocfilehash: cc2fe75f498f9043e5a4b632c144877af0143173
+ms.sourcegitcommit: 20bcef86db4e4869125bb63085fcffd009c19280
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="release-notes"></a>Poznámky k verzi
 
 Toto je seznam změn provedených v této vydané verzi Azure PowerShellu.
 
-## <a name="version-400"></a>Verze 4.0.0
+## <a name="20170717---version-421"></a>27. července 2017 – verze 4.2.1
+* Compute
+    - Oprava potíží s rutinami pro vytvoření a aktualizaci snímků disků virtuálních počítačů (odkaz)[https://github.com/azure/azure-powershell/issues/4309]
+      - New-AzureRmDisk
+      - New-AzureRmSnapshot
+      - Update-AzureRmDisk
+      - Update-AzureRmSnapshot
+* Profil
+    - Oprava potíží s neinteraktivním ověřováním uživatelů v RDFE (odkaz) [https://github.com/Azure/azure-powershell/issues/4299]
+* ServiceManagement
+    - Oprava potíží s neinteraktivním ověřováním uživatelů (odkaz) [https://github.com/Azure/azure-powershell/issues/4299]
+
+## <a name="2017711---version-420"></a>11. července 2017 – verze 4.2.0
+* AnalysisServices
+    * Přidání nového rozhraní API roviny dat
+        - Zavedení rozhraní API pro získání protokolu serveru AS, Export-AzureAnalysisServicesInstanceLog
+* Automation
+    * Správné nastavení hodnoty TimeZone pro týdenní a měsíční plány pro New-AzureRmAutomationSchedule
+        - Další informace najdete u popisu těchto potíží: https://github.com/Azure/azure-powershell/issues/3043
+* AzureBatch
+    - Přidání nové rutiny Get-AzureBatchJobPreparationAndReleaseTaskStatus
+    - Přidání počátečního a koncového rozsahu bajtů pro parametry Get-AzureBatchNodeFileContent
+* CognitiveServices
+    * Integrace se sadou Cognitive Services Management SDK verze 1.0.0
+    * Opravy chyby kontroly délky názvů účtů
+* Compute
+    * Podpora typu účtu úložiště pro disk Image:
+        - Přidání parametru StorageAccountType pro Set-AzureRmImageOsDisk a Add-AzureRmImageDataDisk
+    * Funkce PrivateIP a PublicIP v konfiguraci IP VMSS:
+        - Přidání názvů PrivateIPAddressVersion, PublicIPAddressConfigurationName,PublicIPAddressConfigurationIdleTimeoutInMinutes, DnsSetting do New-AzureRmVmssIpConfig
+        - Přidání parametru PrivateIPAddressVersion pro určení IPv4 nebo IPv6 do New-AzureRmVmssIpConfig
+    * Funkce správy výkonu:
+        - Přidání přepínacího parametru PerformMaintenance do Restart-AzureRmVM
+        - Get-AzureRmVM -Status zobrazuje informace o správě výkonu daného virtuálního počítače
+    * Funkce identity virtuálního počítače:
+        - Přidání parametru IdentityType do New-AzureRmVMConfig a UpdateAzureRmVM
+        - Get-AzureRmVM zobrazuje informace o identitě daného virtuálního počítače
+    * Funkce identity VMSS:
+        - Přidání parametru IdentityType do New-AzureRmVmssConfig
+        - Get-AzureRmVmss zobrazuje informace o identitě daného VMSS
+    * Funkce diagnostiky spouštění VMSS:
+        - Nová rutina pro nastavení diagnostiky spouštění objektu Vmss: Set-AzureRmVmssBootDiagnostics
+        - Přidání parametru BootDiagnostic do New-AzureRmVmssConfig
+    * Funkce typu licence VMSS:
+        - Přidání parametru LicenseType do New-AzureRmVmssConfig
+    * Podpora pro RecoveryPolicyMode:
+        - Přidání parametru RecoveryPolicyMode do New-AzureRmVmssConfig
+    * Funkce pro SKU výpočetních prostředků:
+        - Nová rutina Get-AzureRmComputeResourceSku zobrazuje SKU všech výpočetních prostředků
+* DataFactory
+    * Ukončení používání New-AzureRmDataFactoryGatewayKey
+    * Zavedení funkce klíče ověření brány přidáním New-AzureRmDataFactoryGatewayAuthKey a Get-AzureRmDataFactoryGatewayAuthKey
+* DataLakeAnalytics
+    * Přidání podpory pro CRUD zásad Compute prostřednictvím následujících příkazů:
+        - New-AzureRMDataLakeAnalyticsComputePolicy
+        - Get-AzureRMDataLakeAnalyticsComputePolicy
+        - Remove-AzureRMDataLakeAnalyticsComputePolicy
+        - Update-AzureRMDataLakeAnalyticsComputePolicy
+    * Přidání podpory pro metadata relací úloh pro usnadnění práce s opakujícími se úlohami a kanály úloh Následující příkazy byly aktualizovány nebo přidány:
+        - Submit-AzureRMDataLakeAnalyticsJob
+        - Get-AzureRMDataLakeAnalyticsJob
+        - Get-AzureRMDataLakeAnalyticsJobRecurrence
+        - Get-AzureRMDataLakeAnalyticsJobPipeline
+    * Aktualizace cílové skupiny tokenů pro rozhraní API katalogů a úloh, aby se použila správná konkrétní cílová skupina Data Lake místo cílové skupiny prostředků Azure
+* DataLakeStore
+    * Přidání podpory pro rotace klíčů služby KeyVault spravovaných uživatelem v rutině Set-AzureRMDataLakeStoreAccount
+    * Přidání zásadní aktualizace pro automatickou aktivaci volání `enableKeyVault` po přidání služby KeyVault spravované uživatelem nebo rotaci klíče
+    * Aktualizace cílové skupiny tokenů pro rozhraní API katalogů a úloh, aby se použila správná konkrétní cílová skupina Data Lake místo cílové skupiny prostředků Azure
+    * Opravy chyby omezující velikost souborů vytvořených nebo připojených pomocí následujících rutin:
+        - New-AzureRmDataLakeStoreItem
+        - Add-AzureRmDataLakeStoreItemContent
+* Dns
+    * Oprava chyby ve scénáři propojení pro Get-AzureRmDnsZone
+        - Další informace najdete tady: https://github.com/Azure/azure-powershell/issues/4203
+* HDInsight
+    * Přidání podpory pro povolení/zákaz sady Operations Management Suite (OMS)
+    * Nové rutiny
+        - Enable-AzureRmHDInsightOperationsManagementSuite
+        - Disable-AzureRmHDInsightOperationsManagementSuite
+        - Get-AzureRmHDInsightOperationsManagementSuite
+    * Přidání nových parametrů pro nastavení vlastních konfigurací Sparku do Add-AzureRmHDInsightConfigValues
+        - Parametry SparkDefaults a SparkThriftConf pro Spark 1.6
+        - Parametry Spark2Defaults a Spark2ThriftConf pro Spark 2.0
+* Insights
+    * Problém č. 4215 (žádost o změnu): Odebrání limitu 15 dnů v časovém intervalu pro rutinu Get-AzureRmLog Také menší změny v názvech testů jednotek
+    * Problém č. 3957: Oprava pro Get-AzureRmLog
+        - Problém č. 1: Back-end vrací záznamy na stránkách po 200 záznamech, které jsou propojené pomocí tokenu pokračování. Zákazníkům tato rutina vracela jenom 200 záznamů, přestože věděli, že je jich víc. K této situaci docházelo bez ohledu na hodnotu nastavenou MaxEvents (kromě případů, kdy tato hodnota byla menší než 200).
+        - Problém č. 2: Dokumentace obsahovala nesprávné informace o této rutině, např. výchozí časový interval byla 1 hodina.
+        - Oprava č. 1: Rutina teď následuje token pokračování vrácený back-endem, dokud nedosáhne hodnoty MaxEvents nebo konce sady.<br>Výchozí hodnota pro MaxEvents je 1000 a maximální hodnota je 100 000. Libovolná hodnota, která je menší než 1, se pro MaxEvents ignoruje a místo ní se použije výchozí hodnota. Tyto hodnoty a chování se nezměnily, ale nově jsou správně zdokumentované.<br>Byl přidán alias pro MaxEvents (MaxRecords), protože název rutiny už neodkazuje na události (event), ale jenom na protokoly (log).
+        - Oprava č. 2: Dokumentace obsahuje správné informace, které jsou podrobnější: nový alias, správný časový interval a správnou výchozí, minimální a maximální hodnotu.
+* KeyVault
+    * Odebrání e-mailové adresy z dotazu na adresář, pokud je pro rutiny Set-AzureRMKeyVaultAccessPolicy a Remove-AzureRMKeyVaultAccessPolicy zadaný parametr -UserPrincipalName.
+      - Obě tyto rutiny teď mají parametr -EmailAddress, který je možné použít místo parametru -UserPrincipalName, pokud je vhodné dotazování na e-mailovou adresu.  Pokud je v adresáři víc než jedna vyhovující e-mailová adresa, rutina selže.
+* Síť
+    * New-AzureRmIpsecPolicy: Parametry SALifeTimeSeconds a SADataSizeKilobytes už nejsou povinné
+        - Výchozí nastavení pro SALifeTimeSeconds je 27 000 sekund
+        - Výchozí nastavení pro SADataSizeKilobytes je 102 400 000 KB
+    * Přidání podpory pro vlastní konfiguraci šifrovací sady s využitím zásad SSL a zobrazení rozhraní API se všemi možnostmi SSL ve službě Application Gateway
+        - Přidání volitelného parametru -PolicyType, -PolicyName, -MinProtocolVersion, -Ciphersuite
+            - Add-AzureRmApplicationGatewaySslPolicy
+            - New-AzureRmApplicationGatewaySslPolicy
+            - Set-AzureRmApplicationGatewaySslPolicy
+        - Přidání Get-AzureRmApplicationGatewayAvailableSslOptions (alias: List-AzureRmApplicationGatewayAvailableSslOptions)
+        - Přidání Get-AzureRmApplicationGatewaySslPredefinedPolicy (alias: List-AzureRmApplicationGatewaySslPredefinedPolicy)
+    * Přidání podpory přesměrování ve službě Application Gateway
+        - Přidání Add-AzureRmApplicationGatewayRedirectConfiguration
+        - Přidání Get-AzureRmApplicationGatewayRedirectConfiguration
+        - Přidání New-AzureRmApplicationGatewayRedirectConfiguration
+        - Přidání Remove-AzureRmApplicationGatewayRedirectConfiguration
+        - Přidání Set-AzureRmApplicationGatewayRedirectConfiguration
+        - Přidání volitelného parametru -RedirectConfiguration
+            - Add-AzureRmApplicationGatewayRequestRoutingRule
+            - New-AzureRmApplicationGatewayRequestRoutingRule
+            - Set-AzureRmApplicationGatewayRequestRoutingRule
+        - Přidání volitelného parametru -DefaultRedirectConfiguration
+            - Add-AzureRmApplicationGatewayUrlPathMapConfig
+            - New-AzureRmApplicationGatewayUrlPathMapConfig
+            - Set-AzureRmApplicationGatewayUrlPathMapConfig
+        - Přidání volitelného parametru -RedirectConfiguration
+            - Add-AzureRmApplicationGatewayPathRuleConfig
+            - New-AzureRmApplicationGatewayPathRuleConfig
+            - Set-AzureRmApplicationGatewayPathRuleConfig
+        - Přidání volitelného parametru -RedirectConfigurations
+            - New-AzureRmApplicationGateway
+            - Set-AzureRmApplicationGateway
+    * Přidání podpory pro weby Azure ve službě Application Gateway
+        - Přidání New-AzureRmApplicationGatewayProbeHealthResponseMatch
+        - Přidání volitelných parametrů -PickHostNameFromBackendHttpSettings, -MinServers, -Match
+            - Add-AzureRmApplicationGatewayProbeConfig
+            - New-AzureRmApplicationGatewayProbeConfig
+            - Set-AzureRmApplicationGatewayProbeConfig
+        - Přidání volitelných parametrů -PickHostNameFromBackendAddress, -AffinityCookieName, -ProbeEnabled, -Path
+            - Add-AzureRmApplicationGatewayBackendHttpSettings
+            - New-AzureRmApplicationGatewayBackendHttpSettings
+            - Set-AzureRmApplicationGatewayBackendHttpSettings
+    * Aktualizace Get-AzureRmPublicIPaddress pro načtení prostředků publicipaddress vytvořených pomocí škálovací sady virtuálního počítače
+    * Přidání rutiny pro získání aktuálního využití virtuální sítě
+        - Get-AzureRmVirtualNetworkUsageList
+* Profil
+    * Oprava chyby při použití Import-AzureRmContext nebo Save-AzureRmContext
+        - Další informace najdete u popisu těchto potíží: https://github.com/Azure/azure-powershell/issues/3954
+* RecoveryServices.SiteRecovery
+    * Představení nového modulu pro operace Azure Site Recovery
+        - Všechny rutiny začínají na AzureRmRecoveryServicesAsr*
+* Sql
+    * Přidání rutin PowerShellu pro synchronizaci dat do AzureRM.Sql
+    * Aktualizace rutin AzureRmSqlServer pro použití nových verzí rozhraní REST API, které se vyhýbají časovým limitům při vytváření serveru
+    * Zastaralé rutiny upgradu serveru, protože stará verze serveru (2.0) už neexistuje
+    * Přidání nového volitelného přepínacího parametru AssignIdentity do rutin New-AzureRmSqlServer a Set-AzureRmSqlServer pro podporu zřizování identity pro prostředek serveru SQL
+    * Parametr ResourceGroupName je teď pro Get-AzureRmSqlServer volitelný
+        - Další informace najdete u popisu těchto potíží: https://github.com/Azure/azure-powershell/issues/635
+* ServiceManagement pro ExpressRoute:
+    * Aktualizace rutiny New-AzureBgpPeering pro přidání těchto nových možností:
+        - PeerAddressType: Je možné zadat hodnoty IPv4 nebo IPv6 pro vytvoření partnerského vztahu protokolu BGP pro odpovídající typ adres
+    * Aktualizace rutiny Set-AzureBgpPeering pro přidání těchto nových možností:
+        - PeerAddressType: Je možné zadat hodnoty IPv4 nebo IPv6 pro aktualizaci partnerského vztahu protokolu BGP pro odpovídající typ adres
+    * Aktualizace rutiny Remove-AzureBgpPeering pro přidání těchto nových možností:
+        - PeerAddressType: Je možné zadat hodnoty IPv4, IPv6 nebo All pro odebrání partnerského vztahu protokolu BGP pro odpovídající typ adres nebo všech vztahů
+
+## <a name="20170607---version-410"></a>7. června 2017 – verze 4.1.0
+* AnalysisServices
+    * Přidání nových SKU: B1, B2, S0
+    * Přidání podpory pro vertikálně navýšení/snížení kapacity
+* CognitiveServices
+    * Aktualizace podrobného zobrazení licenčních smluv při vytváření prostředků služeb Cognitive Services
+* Compute
+    * Oprava Test-AzureRmVMAEMExtension pro virtuální počítače s několika spravovanými disky
+    * Aktualizace Set-AzureRmVMAEMExtension: Přidání informací o ukládání do paměti pro spravované disky úrovně Premium
+    * Add-AzureRmVhd: Zvýšení omezení velikosti pro VHD na 4 TB
+    * Stop-AzureRmVM: Vyjasnění dokumentace pro parametr STayProvisioned
+    * New-AzureRmDiskUpdateConfig
+      * Zastaralé parametry CreateOption, StorageAccountId, ImageReference, SourceUri, SourceResourceId
+    * Set-AzureRmDiskUpdateImageReference: Zastaralá rutina
+    * New-AzureRmSnapshotUpdateConfig
+      * Zastaralé parametry CreateOption, StorageAccountId, ImageReference, SourceUri, SourceResourceId
+    * Set-AzureRmSnapshotUpdateImageReference: Zastaralá rutina
+* DataLakeStore
+    * Enable-AzureRmDataLakeStoreKeyVault (Enable-AdlStoreKeyVault)
+      * Povolení spravovaného šifrování služby KeyVault pro DataLake Store
+* DevTestLabs
+    * Aktualizace rutin pro práci s aktuální a aktualizovanou verzí rozhraní API služby DevTest Labs
+* IotHub
+    * Přidání podpory směrování pro rutiny IoTHub
+* KeyVault
+  * Nové rutiny pro podporu spravovaných klíčů účtu úložiště služby KeyVault
+    * Get-AzureKeyVaultManagedStorageAccount
+    * Add-AzureKeyVaultManagedStorageAccount
+    * Remove-AzureKeyVaultManagedStorageAccount
+    * Update-AzureKeyVaultManagedStorageAccount
+    * Update-AzureKeyVaultManagedStorageAccountKey
+    * Get-AzureKeyVaultManagedStorageSasDefinition
+    * Set-AzureKeyVaultManagedStorageSasDefinition
+    * Remove-AzureKeyVaultManagedStorageSasDefinition
+* Síť
+    * Get-AzureRmNetworkUsage: Nová rutina pro zobrazení podrobných informací o kapacitě a využití sítě
+    * Přidání nových možností GatewaySku pro VirtualNetworkGateways
+        * VpnGw1, VpnGw2, VpnGw3 jsou nové SKU pro brány VPN Gateway
+    * Set-AzureRmNetworkWatcherConfigFlowLog
+      * Oprava příkladů nápovědy
+* NotificationHubs
+    * Transparentní aktualizace rutin NotificationHubs pro nové rozhraní API
+* Profil
+    * Resolve-AzureRmError
+      * Nová rutina pro zobrazení podrobných informací o chybách a výjimkách vygenerovaných rutinami, včetně dat požadavku serveru / odpovědi
+    * Send-Feedback
+      * Povolení odeslání zpětné vazby bez přihlášení
+    * Get-AzureRmSubscription
+      * Oprava chyby při načítání předplatných CSP
+* Zdroje
+    * Oprava potíží s Get-AzureRMRoleAssignment, které způsobovaly chybnou žádost, pokud byl počet roleassignments větší než 1000
+        * Uživatelé teď můžou použít Get-AzureRMRoleAssignment i v případě, že parametr roleassignments ke vrácení je větší než 1000
+* Sql
+    * Restore-AzureRmSqlDatabase: Aktualizace příkladu v dokumentaci
+* Úložiště
+    * Přidání podpory nastavení Add AssignIdentity pro rutiny účtu úložiště v režimu prostředků
+        * New-AzureRmStorageAccount
+        * Set-AzureRmStorageAccount
+    * Přidání podpory zákaznických klíčů pro rutiny účtu úložiště v režimu prostředků
+        * Set-AzureRmStorageAccount
+        * New-AzureRmStorageAccountEncryptionKeySource
+* TrafficManager
+
+    * Nová nastavení monitorování: MonitorIntervalInSeconds, MonitorTimeoutInSeconds, MonitorToleratedNumberOfFailures
+    * Nový monitorovací protokol TCP
+* ServiceManagement
+    * Add-AzureVhd: Zvýšení omezení velikosti pro VHD na 4 TB
+    * New-AzureBGPPeering: Podpora režimu LegacyMode
+* Azure.Storage
+    * Aktualizace nápovědy pro parametry, které přijímají zástupné znaky, a aktualizace typu StorageContext
+
+## <a name="20170523---version-402"></a>23. května 2017 – verze 4.0.2
+* Profil
+    * Add-AzureRmAccount
+      * Přidání aliasu parametru `-EnvironmentName` pro zajištění zpětné kompatibility s AzureRM.profile verze 2.x
+
+## <a name="20170512---version-401"></a>12. května 2017 – verze 4.0.1
+ * Oprava potíží s New-AzureStorageContext v offline scénářích: https://github.com/Azure/azure-powershell/issues/3939
+
+## <a name="20170510---version-400"></a>10. května 2017 – verze 4.0.0
+
 
 * Toto vydání obsahuje nejnovější změny. Podrobnosti o změnách a informace o vlivu změn na stávající skripty najdete v [příručce k migraci](https://aka.ms/azps-migration-guide).
 * Správa rozhraní API
