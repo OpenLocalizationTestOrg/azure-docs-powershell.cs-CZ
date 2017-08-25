@@ -10,30 +10,29 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 03/30/2017
-ms.openlocfilehash: 4bfa14f4f139fa8c35d4bb51ae81baea819188ce
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.openlocfilehash: f1c13317f0b42b547166a8130dd8c29bed5759c9
+ms.sourcegitcommit: db5c50de90764a9bdc7c1f1dbca3aed5bfeb05fa
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 08/22/2017
 ---
 # <a name="getting-started-with-azure-powershell"></a>Začínáme s prostředím Azure PowerShell
 
 Prostředí Azure PowerShell je určeno pro správu prostředků Azure z příkazového řádku a pro vytváření skriptů pro automatizaci, které pracují s Azure Resource Managerem. Tento článek vám pomůže začít ho používat a seznámí vás se základními koncepcemi jeho fungování.
 
-
 ## <a name="install-azure-powershell"></a>Instalace prostředí Azure PowerShell
-Prvním krokem je ověření, že máte nainstalovanou nejnovější verzí prostředí Azure PowerShell.  Nejnovější verze je 4.1.0.
+
+Prvním krokem je ověření, že máte nainstalovanou nejnovější verzí prostředí Azure PowerShell. Informace o nejnovější verzi najdete v tématu [Poznámky k verzi](./release-notes-azureps.md).
 
 1. [Nainstalujte prostředí Azure PowerShell](install-azurerm-ps.md).
-
 2. Chcete-li ověřit, že instalace proběhla úspěšně, spusťte z příkazového řádku příkaz `Get-Module AzureRM`.
-
 
 ## <a name="log-in-to-azure"></a>Přihlaste se k Azure.
 
 Interaktivní přihlášení:
 
-1. Zadejte `Login-AzureRmAccount`.  Zobrazí se dialogové okno s výzvou k zadání přihlašovacích údajů Azure. Možnost '-EnvironmentName' umožňuje přihlásit se ke službě Azure China nebo Azure Germany.
+1. Zadejte `Login-AzureRmAccount`. Zobrazí se dialogové okno s výzvou k zadání přihlašovacích údajů Azure. Možnost '-EnvironmentName' umožňuje přihlásit se ke službě Azure China nebo Azure Germany.
+
    Příklad: Login-AzureRmAccount -EnvironmentName AzureChinaCloud
 
 2. Zadejte e-mailovou adresu a heslo, které jsou spojené s vaším účtem. Azure přihlašovací údaje ověří, uloží je a pak zavře okno.
