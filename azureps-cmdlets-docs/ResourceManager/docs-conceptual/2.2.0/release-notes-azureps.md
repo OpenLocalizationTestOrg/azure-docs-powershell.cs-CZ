@@ -17,13 +17,11 @@ ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="5a9f2-103">Poznámky k verzi</span><span class="sxs-lookup"><span data-stu-id="5a9f2-103">Release notes</span></span>
-<a id="release-notes" class="xliff"></a>
+# <a name="release-notes"></a><span data-ttu-id="5a9f2-103">Poznámky k verzi</span><span class="sxs-lookup"><span data-stu-id="5a9f2-103">Release notes</span></span>
 
 <span data-ttu-id="5a9f2-104">Toto je seznam změn provedených v této vydané verzi Azure PowerShellu.</span><span class="sxs-lookup"><span data-stu-id="5a9f2-104">This is a list of changes made to Azure PowerShell in this release.</span></span>
 
-## <span data-ttu-id="5a9f2-105">Verze 2.2.0</span><span class="sxs-lookup"><span data-stu-id="5a9f2-105">Version 2.2.0</span></span>
-<a id="version-220" class="xliff"></a>
+## <a name="version-220"></a><span data-ttu-id="5a9f2-105">Verze 2.2.0</span><span class="sxs-lookup"><span data-stu-id="5a9f2-105">Version 2.2.0</span></span>
 * <span data-ttu-id="5a9f2-106">Compute</span><span class="sxs-lookup"><span data-stu-id="5a9f2-106">Compute</span></span>
   - <span data-ttu-id="5a9f2-107">Přidání podpory pro dotazování na stav šifrování z rozšíření AzureDiskEncryptionForLinux</span><span class="sxs-lookup"><span data-stu-id="5a9f2-107">Add support for querying encryption status from the AzureDiskEncryptionForLinux extension</span></span>
 * <span data-ttu-id="5a9f2-108">DataFactory</span><span class="sxs-lookup"><span data-stu-id="5a9f2-108">DataFactory</span></span>

@@ -17,13 +17,11 @@ ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="ae660-103">Poznámky k verzi</span><span class="sxs-lookup"><span data-stu-id="ae660-103">Release notes</span></span>
-<a id="release-notes" class="xliff"></a>
+# <a name="release-notes"></a><span data-ttu-id="ae660-103">Poznámky k verzi</span><span class="sxs-lookup"><span data-stu-id="ae660-103">Release notes</span></span>
 
 <span data-ttu-id="ae660-104">Toto je seznam změn provedených v této vydané verzi Azure PowerShellu.</span><span class="sxs-lookup"><span data-stu-id="ae660-104">This is a list of changes made to Azure PowerShell in this release.</span></span>
 
-## <span data-ttu-id="ae660-105">Verze 1.7.0</span><span class="sxs-lookup"><span data-stu-id="ae660-105">Version 1.7.0</span></span>
-<a id="version-170" class="xliff"></a>
+## <a name="version-170"></a><span data-ttu-id="ae660-105">Verze 1.7.0</span><span class="sxs-lookup"><span data-stu-id="ae660-105">Version 1.7.0</span></span>
 
 * <span data-ttu-id="ae660-106">**Změnili jsme chování parametrů -Force, -Confirm a $ConfirmPreference pro všechny rutiny. Měníme tuto implementaci, aby byla v souladu s pokyny PowerShellu. U většiny rutin to znamená odebrání parametru Force a přeskočení řádku ShouldProcess. Uživatelé budou muset do skriptů PowerShellu zahrnout parametr -Confirm:$false.**</span><span class="sxs-lookup"><span data-stu-id="ae660-106">**Behavioral change for -Force, –Confirm and $ConfirmPreference parameters for all cmdlets. We are changing this implementation to be in line with PowerShell guidelines. For most cmdlets, this means removing the Force parameter and to skip the ShouldProcess prompt, users will need to include the parameter: ‘-Confirm:$false’ in their PowerShell scripts.**</span></span> <span data-ttu-id="ae660-107">Tato změna řeší následující problémy:</span><span class="sxs-lookup"><span data-stu-id="ae660-107">This changes are addressing following issues:</span></span>
   - <span data-ttu-id="ae660-108">Správná implementace funkce –WhatIf, která uživatelům umožňuje zjistit dopady rutiny nebo skriptu, aniž by bylo potřeba provádět vlastní změny.</span><span class="sxs-lookup"><span data-stu-id="ae660-108">Correct implementation of –WhatIf functionality, allowing a user to determine the effects of a cmdlet or script without making any actual changes</span></span>

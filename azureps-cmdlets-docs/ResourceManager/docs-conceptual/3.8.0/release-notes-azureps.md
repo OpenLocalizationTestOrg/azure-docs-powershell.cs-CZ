@@ -17,13 +17,11 @@ ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="fd831-103">Poznámky k verzi</span><span class="sxs-lookup"><span data-stu-id="fd831-103">Release notes</span></span>
-<a id="release-notes" class="xliff"></a>
+# <a name="release-notes"></a><span data-ttu-id="fd831-103">Poznámky k verzi</span><span class="sxs-lookup"><span data-stu-id="fd831-103">Release notes</span></span>
 
 <span data-ttu-id="fd831-104">Toto je seznam změn provedených v této vydané verzi Azure PowerShellu.</span><span class="sxs-lookup"><span data-stu-id="fd831-104">This is a list of changes made to Azure PowerShell in this release.</span></span>
 
-## <span data-ttu-id="fd831-105">Verze 3.8.0</span><span class="sxs-lookup"><span data-stu-id="fd831-105">Version 3.8.0</span></span>
-<a id="version-380" class="xliff"></a>
+## <a name="version-380"></a><span data-ttu-id="fd831-105">Verze 3.8.0</span><span class="sxs-lookup"><span data-stu-id="fd831-105">Version 3.8.0</span></span>
 * <span data-ttu-id="fd831-106">Compute</span><span class="sxs-lookup"><span data-stu-id="fd831-106">Compute</span></span>
   - <span data-ttu-id="fd831-107">Oprava chyby v rutinách Get-*, s cílem umožnit načítat více stránek (více než 120 položek).</span><span class="sxs-lookup"><span data-stu-id="fd831-107">Fix bug in Get-* cmdlets, to allow retrieving multiple pages of data (more than 120 items)</span></span>
 * <span data-ttu-id="fd831-108">DataLakeAnalytics</span><span class="sxs-lookup"><span data-stu-id="fd831-108">DataLakeAnalytics</span></span>

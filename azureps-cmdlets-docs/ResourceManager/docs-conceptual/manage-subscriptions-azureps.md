@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="d275c-104">Správa několika předplatných Azure</span><span class="sxs-lookup"><span data-stu-id="d275c-104">Manage multiple Azure subscriptions</span></span>
-<a id="manage-multiple-azure-subscriptions" class="xliff"></a>
+# <a name="manage-multiple-azure-subscriptions"></a><span data-ttu-id="d275c-104">Správa několika předplatných Azure</span><span class="sxs-lookup"><span data-stu-id="d275c-104">Manage multiple Azure subscriptions</span></span>
 
 <span data-ttu-id="d275c-105">Pokud jste úplně novým uživatelem Azure, máte nejspíš jen jedno předplatné.</span><span class="sxs-lookup"><span data-stu-id="d275c-105">If you are brand new to Azure, you probably only have a single subscription.</span></span> <span data-ttu-id="d275c-106">Pokud ale používáte Azure už delší dobu, pravděpodobně jste si vytvořili více předplatných Azure.</span><span class="sxs-lookup"><span data-stu-id="d275c-106">But if you have been using Azure for a while, you may have created multiple Azure subscriptions.</span></span> <span data-ttu-id="d275c-107">Prostředí Azure PowerShell můžete nakonfigurovat tak, aby se příkazy spouštěly pro konkrétní předplatné.</span><span class="sxs-lookup"><span data-stu-id="d275c-107">You can configure Azure PowerShell to execute commands against a particular subscription.</span></span>
 
