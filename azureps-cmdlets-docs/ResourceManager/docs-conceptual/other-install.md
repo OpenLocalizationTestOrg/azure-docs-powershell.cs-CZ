@@ -10,15 +10,41 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: 368404bcb5218814b4965bb1bcda1e2876441d2a
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.openlocfilehash: 9cee582f74b7f3260c6ae167a8ac358d360ad8ab
+ms.sourcegitcommit: 45587b5091293288e16cfae8ac412e0d42f8f450
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 08/15/2017
 ---
 # <a name="other-installation-methods"></a>Jiné metody instalace
 
 Prostředí Azure PowerShell podporuje několik metod instalace. Upřednostňovaným způsobem je použití modulu PowerShellGet v Galerii prostředí PowerShell. Prostředí Azure PowerShell můžete nainstalovat s použitím instalačního programu webové platformy (WebPI) nebo s použitím souboru MSI, který je k dispozici na [GitHubu](https://github.com/Azure/azure-powershell/releases/latest).
+
+## <a name="docker"></a>Docker
+
+Udržujeme image Dockeru s předkonfigurovaným Azure PowerShellem.
+
+Spusťte kontejner s `docker run`.
+
+```powershell
+docker run azuresdk/azure-powershell
+```
+
+Kromě toho udržujeme podmnožinu rutin jako kontejner PowerShell Core.
+
+Pro Mac/Linux použijte image `latest`.
+
+```bash
+docker run azuresdk/azure-powershell-core:latest
+```
+
+Pro Windows použijte image `nanoserver`.
+
+```powershell
+docker run azuresdk/azure-powershell-core:nanoserver
+```
+
+Prostředí Azure PowerShell je v imagi nainstalované prostřednictvím `Install-Module` z [Galerie prostředí PowerShell](https://www.powershellgallery.com/).
 
 ## <a name="install-using-the-web-platform-installer"></a>Instalace s použitím instalačního programu webové platformy
 

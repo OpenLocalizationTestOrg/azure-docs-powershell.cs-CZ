@@ -10,11 +10,11 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
 ms.date: 07/26/2017
-ms.openlocfilehash: 3772b68949dc9dba110e6015c8d2a8b944b26528
-ms.sourcegitcommit: 20bcef86db4e4869125bb63085fcffd009c19280
+ms.openlocfilehash: 02bfc15fec83ed4078d9a054b450c5a3cd66b8e2
+ms.sourcegitcommit: db5c50de90764a9bdc7c1f1dbca3aed5bfeb05fa
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 08/22/2017
 ---
 # <a name="overview-of-azure-powershell"></a>Přehled prostředí Azure PowerShell
 
@@ -29,13 +29,14 @@ Následující ukázky vám můžou pomoct při provádění běžných postupů
 * [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 * [Databáze SQL](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
-
 > [!NOTE] > Pokud máte nasazení používající model nasazení Classic, který nejde převést, můžete nainstalovat verzi správy služeb Azure PowerShellu. Další informace najdete v tématu popisujícím [instalaci modulu správy služeb Azure PowerShellu](/powershell/azure/servicemanagement/install-azure-ps).
-
 
 ### <a name="need-help-with-powershell"></a>Potřebujete s prostředím PowerShell pomoct?
 
-Pokud s prostředím PowerShell nejste seznámeni, může vám pomoct úvod do prostředí PowerShell. Pokud chcete s prostředím PowerShell začít, najdete informace v tématu [Skriptování v prostředí PowerShell](https://technet.microsoft.com/library/bb978526.aspx).
+Pokud s prostředím PowerShell nejste seznámeni, může vám pomoct úvod do prostředí PowerShell.
+
+* [Instalace prostředí PowerShell](/powershell/scripting/installing-windows-powershell)
+* [Skriptování s využitím PowerShellu](/powershell/scripting/scripting-with-windows-powershell)
 
 Můžete se podívat i na toto video: [Základy prostředí PowerShell, 1. část: Začínáme s prostředím PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1).
 
