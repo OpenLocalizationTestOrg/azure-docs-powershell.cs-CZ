@@ -1,16 +1,22 @@
 # [Azure PowerShell](overview.md)
+
 ## [Instalace](install-azurerm-ps.md)
+### [Instalace v systému macOS a Linux](install-azurermps-maclinux.md)
 ### [Další metody instalace](other-install.md)
+
 ## [Začínáme](get-started-azureps.md)
 ## [Přihlásit se](authenticate-azureps.md)
 ### [Vytvoření instančního objektu služby](create-azure-service-principal-azureps.md)
+
 ## [Dotazy](queries-azureps.md)
 ## [Formátování](formatting-output.md)
 ## [Předplatná](manage-subscriptions-azureps.md)
+
 ## Nasazení
 ### [Nasazení pomocí šablon Resource Manageru](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-template-deploy)
 ### [Export šablon Resource Manageru](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-export-template-powershell)
 ### [Nasazení privátní šablony Resource Manageru s tokenem SAS](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-powershell-sas-token)
+
 ## [Poznámky k verzi](release-notes-azureps.md)
 
 # Ukázkové skripty

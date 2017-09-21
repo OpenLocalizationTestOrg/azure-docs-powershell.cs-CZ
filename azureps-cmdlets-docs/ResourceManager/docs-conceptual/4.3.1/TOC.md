@@ -1,9 +1,14 @@
 # [Azure PowerShell](../overview.md)
+
 ## [Instalace](../install-azurerm-ps.md)
+### [Instalace v systému macOS a Linux](../install-azurermps-maclinux.md)
 ### [Další metody instalace](../other-install.md)
+
 ## [Začínáme](../get-started-azureps.md)
+
 ## [Přihlásit se](../authenticate-azureps.md)
 ### [Vytvoření instančního objektu služby](../create-azure-service-principal-azureps.md)
+
 ## [Dotazy](../queries-azureps.md)
 ## [Formátování](../formatting-output.md)
 ## [Předplatná](../manage-subscriptions-azureps.md)

@@ -10,13 +10,16 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/17/2017
-ms.openlocfilehash: 8b82de3634a1492baf54ce4d2172af3e3287229c
-ms.sourcegitcommit: db5c50de90764a9bdc7c1f1dbca3aed5bfeb05fa
+ms.openlocfilehash: 8f99855c88240c6c5aeb6dd3b1ba5d9ddc8aefd1
+ms.sourcegitcommit: 202ec2df66c40a60f47ea06b30a6701ad444d229
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="install-and-configure-azure-powershell"></a>Instalace a konfigurace Azure Powershellu
+
+Tento článek vysvětluje kroky instalace modulů Azure PowerShell v prostředí Windows.
+Pokud chcete používat Azure PowerShell v systému macOS nebo Linux, přečtěte si článek o [instalaci a konfiguraci Azure PowerShellu v systému macOS a Linux](install-azureps-maclinux.md).
 
 Preferovanou metodu instalace je instalace Azure PowerShellu z Galerie prostředí PowerShell.
 
