@@ -183,7 +183,6 @@
                 "version": "azuresmps-4.0.0",
                 "dest": "azure/servicemanagement"
             },
-
             {
                 "files": [
                     "toc.yml"
