@@ -9,22 +9,41 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 03/30/2017
-ms.openlocfilehash: f1c13317f0b42b547166a8130dd8c29bed5759c9
-ms.sourcegitcommit: db5c50de90764a9bdc7c1f1dbca3aed5bfeb05fa
+ms.date: 08/31/2017
+ms.openlocfilehash: 2cd3fc8e955ae826471dceee79d5e6b70070d416
+ms.sourcegitcommit: e6b7e20bbd04eda51416c56b13f867102b602d1a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="getting-started-with-azure-powershell"></a>Začínáme s prostředím Azure PowerShell
 
-Prostředí Azure PowerShell je určeno pro správu prostředků Azure z příkazového řádku a pro vytváření skriptů pro automatizaci, které pracují s Azure Resource Managerem. Tento článek vám pomůže začít ho používat a seznámí vás se základními koncepcemi jeho fungování.
+Prostředí Azure PowerShell je určeno pro správu prostředků Azure z příkazového řádku a pro vytváření skriptů pro automatizaci, které pracují s Azure Resource Managerem. Můžete ho používat v prohlížeči pomocí služby [Azure Cloud Shell](/azure/cloud-shell/overview) nebo nainstalovat na místním počítači a používat ho v jakékoli relaci PowerShellu. Tento článek vám pomůže začít ho používat a seznámí vás se základními koncepcemi jeho fungování.
+
+## <a name="connect"></a>Připojení
+
+Nejjednodušším způsobem, jak začít, je [spustit Cloud Shell](/azure/cloud-shell/quickstart).
+
+1. Spusťte Cloud Shell z horního navigačního panelu na webu Azure Portal.
+
+   ![Ikona prostředí](~/media/get-started-azureps/shell-icon.png)
+
+2. Vyberte předplatné, které chcete použít, a vytvořte účet úložiště.
+
+   ![vytvořit účet úložiště](~/media/get-started-azureps/storage-prompt.png)
+
+Po vytvoření úložiště Cloud Shell v prohlížeči otevře relaci PowerShellu.
+
+![Cloud Shell pro PowerShell](~/media/get-started-azureps/cloud-powershell.png)
+
+Azure PowerShell můžete také nainstalovat a používat místně v relaci PowerShellu.
 
 ## <a name="install-azure-powershell"></a>Instalace prostředí Azure PowerShell
 
 Prvním krokem je ověření, že máte nainstalovanou nejnovější verzí prostředí Azure PowerShell. Informace o nejnovější verzi najdete v tématu [Poznámky k verzi](./release-notes-azureps.md).
 
 1. [Nainstalujte prostředí Azure PowerShell](install-azurerm-ps.md).
+
 2. Chcete-li ověřit, že instalace proběhla úspěšně, spusťte z příkazového řádku příkaz `Get-Module AzureRM`.
 
 ## <a name="log-in-to-azure"></a>Přihlaste se k Azure.
@@ -51,7 +70,7 @@ Vytvořte skupinu prostředků s názvem „MyResourceGroup“ v oblasti westeur
 New-AzureRmResourceGroup -Name 'myResourceGroup' -Location 'westeurope'
 ```
 
-```
+```Output
 ResourceGroupName : myResourceGroup
 Location          : westeurope
 ProvisioningState : Succeeded
@@ -123,7 +142,7 @@ New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfi
 
 Příkaz `New-AzureRmVM` zobrazí výsledky jako výstup, jakmile bude virtuální počítač zcela vytvořen a připraven k použití.
 
-```
+```Output
 RequestId IsSuccessStatusCode StatusCode ReasonPhrase
 --------- ------------------- ---------- ------------
                          True         OK OK
@@ -135,7 +154,7 @@ Teď se přihlaste k nově vytvořenému virtuálnímu počítači se systémem 
 $publicIp | Select-Object Name,IpAddress
 ```
 
-```
+```Output
 Name                  IpAddress
 ----                  ---------
 mypublicdns1400512543 xx.xx.xx.xx
@@ -143,12 +162,11 @@ mypublicdns1400512543 xx.xx.xx.xx
 
 Pokud pracujete v systému Windows, můžete tuto operaci provést z příkazového řádku pomocí příkazu mstsc:
 
-```
+```powershell
 mstsc /v:xx.xxx.xx.xxx
 ```
 
 Pro přihlášení zadejte kombinaci uživatelského jména a hesla, kterou jste použili při vytváření virtuálního počítače.
-
 
 ## <a name="create-a-linux-virtual-machine"></a>Vytvoření virtuálního počítače s Linuxem
 
@@ -219,7 +237,7 @@ Teď, když byl virtuální počítač vytvořen, se můžete k novému virtuál
 ssh xx.xxx.xxx.xxx
 ```
 
-```
+```Output
 Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.19.0-65-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com/
@@ -247,7 +265,7 @@ individual files in /usr/share/doc/*/copyright.
 Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 applicable law.
 
-my-login@MyLinuxVM:~$
+my-login@MyLinuxVM:../../..$
 ```
 
 ## <a name="creating-other-resources-in-azure"></a>Vytváření dalších prostředků v Azure
@@ -291,7 +309,7 @@ Get-AzureRmResource |
     Select-Object Name,Location,ResourceType
 ```
 
-```
+```Output
 Name                                                  Location   ResourceType
 ----                                                  --------   ------------
 myLinuxVM_OsDisk_1_36ca038791f642ba91270879088c249a   westeurope Microsoft.Compute/disks
@@ -320,7 +338,7 @@ Remove-AzureRmVM -Name myWindowsVM -ResourceGroupName myResourceGroup
 
 Zobrazí se výzva k potvrzení, že chcete příslušný prostředek odebrat.
 
-```
+```Output
 Confirm
 Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -332,7 +350,7 @@ Můžete také odstranit více prostředků najednou. Následující příkaz na
 Remove-AzureRmResourceGroup -Name myResourceGroup
 ```
 
-```
+```Output
 Confirm
 Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
@@ -351,5 +369,5 @@ Chcete-li se dozvědět víc o způsobech používání prostředí Azure PowerS
 * [Vytváření instančních objektů v Azure s využitím prostředí Azure PowerShell](create-azure-service-principal-azureps.md)
 * Přečtěte si poznámky k verzi o migraci ze starší verze: [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).
 * Získejte pomoc od komunity:
-  + [Fórum Azure na webu MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  + [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
+  * [Fórum Azure na webu MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
+  * [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)

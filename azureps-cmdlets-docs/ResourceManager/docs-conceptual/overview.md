@@ -9,18 +9,18 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
-ms.date: 07/26/2017
-ms.openlocfilehash: 02bfc15fec83ed4078d9a054b450c5a3cd66b8e2
-ms.sourcegitcommit: db5c50de90764a9bdc7c1f1dbca3aed5bfeb05fa
+ms.date: 08/31/2017
+ms.openlocfilehash: ed681a6e920f698caab978ad57fcee9a76420afd
+ms.sourcegitcommit: e6b7e20bbd04eda51416c56b13f867102b602d1a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="overview-of-azure-powershell"></a>Přehled prostředí Azure PowerShell
 
-Prostředí Azure PowerShell poskytuje sadu rutin, které ke správě vašich prostředků Azure využívají model [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview).
+Prostředí Azure PowerShell poskytuje sadu rutin, které ke správě vašich prostředků Azure využívají model [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview). Můžete ho používat v prohlížeči pomocí služby [Azure Cloud Shell](/azure/cloud-shell/overview) nebo nainstalovat na místním počítači a používat ho v jakékoli relaci PowerShellu.
 
-Po přečtení článku týkajícím se [instalace](install-azurerm-ps.md) budete moci prostředí Azure PowerShell zprovoznit ve svém systému. Pak si přečtěte článek [Začínáme](get-started-azureps.md), abyste mohli začít s používáním. Informace o nejnovější verzi najdete v tématu [Poznámky k verzi](release-notes-azureps.md).
+Azure PowerShell můžete spustit v prohlížeči pomocí služby [Cloud Shell](/azure/cloud-shell/overview) nebo [nainstalovat](install-azurerm-ps.md) na vlastním počítači. Pak si přečtěte článek [Začínáme](get-started-azureps.md), abyste mohli začít s používáním. Informace o nejnovější verzi najdete v tématu [Poznámky k verzi](release-notes-azureps.md).
 
 Následující ukázky vám můžou pomoct při provádění běžných postupů s použitím prostředí Azure PowerShell:
 
@@ -29,7 +29,8 @@ Následující ukázky vám můžou pomoct při provádění běžných postupů
 * [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 * [Databáze SQL](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
-> [!NOTE] > Pokud máte nasazení používající model nasazení Classic, který nejde převést, můžete nainstalovat verzi správy služeb Azure PowerShellu. Další informace najdete v tématu popisujícím [instalaci modulu správy služeb Azure PowerShellu](/powershell/azure/servicemanagement/install-azure-ps).
+> [!NOTE] &gt; Pokud máte nasazení používající model nasazení Classic, který nejde převést, můžete nainstalovat verzi správy služeb Azure PowerShellu. Další informace najdete v tématu popisujícím [instalaci modulu správy služeb Azure PowerShellu](/powershell/azure/servicemanagement/install-azure-ps).
+
 
 ### <a name="need-help-with-powershell"></a>Potřebujete s prostředím PowerShell pomoct?
 
