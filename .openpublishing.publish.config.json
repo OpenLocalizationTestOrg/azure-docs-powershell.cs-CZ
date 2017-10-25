@@ -34,6 +34,7 @@
     "live-sxs"
   ],
   "skip_source_output_uploading": false,
+  "git_repository_url_open_to_public_contributors": "https://github.com/azure/azure-docs-powershell.cs-CZ",
   "git_repository_branch_open_to_public_contributors": "live",
   "dependent_repositories": [
     {
