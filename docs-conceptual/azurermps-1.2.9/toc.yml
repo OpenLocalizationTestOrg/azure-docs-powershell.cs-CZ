@@ -1,0 +1,41 @@
+- name: Azure PowerShell
+  href: overview.md
+  items:
+    - name: Instalace
+      href: install-azurerm-ps.md
+      items:
+        - name: Jiné metody instalace
+          href: other-install.md
+    - name: Začínáme
+      href: get-started-azureps.md
+    - name: Přihlásit se
+      href: authenticate-azureps.md
+      items:
+        - name: Vytvoření instančního objektu
+          href: create-azure-service-principal-azureps.md
+    - name: Dotazy
+      href: queries-azureps.md
+    - name: Formátování
+      href: formatting-output.md
+    - name: Předplatná
+      href: manage-subscriptions-azureps.md
+    - name: Nasazení
+      items:
+        - name: Nasazení pomocí šablon Resource Manageru
+          href: 'https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy'
+        - name: Export šablon Resource Manageru
+          href: 'https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-export-template-powershell'
+        - name: Nasazení privátní šablony Resource Manageru s tokenem SAS
+          href: 'https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-powershell-sas-token'
+    - name: "Poznámky k\_verzi"
+      href: release-notes-azureps.md
+- name: Ukázkové skripty
+  items:
+    - name: Virtuální počítače s Linuxem
+      href: 'https://docs.microsoft.com/en-us/azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json'
+    - name: Virtuální počítače s Windows
+      href: 'https://docs.microsoft.com/en-us/azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json'
+    - name: Web Apps
+      href: 'https://docs.microsoft.com/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json'
+    - name: Databáze SQL
+      href: 'https://docs.microsoft.com/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json'
