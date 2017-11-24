@@ -1,4 +1,4 @@
--- title: Začínáme s Azure PowerShellem | Microsoft Docs description: services: azure author: sdwheeler ms.author: sewhee manager: carmonm ms.product: azure ms.service: azure-powershell ms.devlang: powershell ms.topic: get-started-article ms.date: 08/31/2017
+-- title: Začínáme s Azure PowerShellem | Microsoft Docs description: services: azure author: sdwheeler ms.author: sewhee manager: carmonm ms.product: azure ms.service: azure-powershell ms.devlang: powershell ms.topic: get-started-article ms.date: 11/15/2017
 ---
 # <a name="getting-started-with-azure-powershell"></a>Začínáme s prostředím Azure PowerShell
 
@@ -28,7 +28,7 @@ Prvním krokem je ověření, že máte nainstalovanou nejnovější verzí pros
 
 1. [Nainstalujte prostředí Azure PowerShell](install-azurerm-ps.md).
 
-2. Chcete-li ověřit, že instalace proběhla úspěšně, spusťte z příkazového řádku příkaz `Get-Module AzureRM`.
+2. Chcete-li ověřit, že instalace proběhla úspěšně, spusťte z příkazového řádku příkaz `Get-Module AzureRM -ListAvailable`.
 
 ## <a name="log-in-to-azure"></a>Přihlaste se k Azure.
 
