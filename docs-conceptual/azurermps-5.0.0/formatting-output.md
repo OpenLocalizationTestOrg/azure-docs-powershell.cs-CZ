@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: 2b23af1ef84b7c91abdcbe0738b29b068f82fd32
-ms.sourcegitcommit: 358d260a867c6ee2e8700b91f776ba4f1b0e24a5
+ms.openlocfilehash: 916cf8590de89762bade4f01ce5a502383d51796
+ms.sourcegitcommit: 95f216dfda4841358d4656fbdea1b7faaeecbdbd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="formatting-query-results"></a>Formátování výsledků dotazu
 
@@ -58,7 +58,7 @@ MyWin2016VM   MYWESTEURG        westeurope
 Pokud chcete, můžete informace zobrazit ve formátu seznamu. To je uvedeno v následujícím příkladu s použitím rutiny `Format-List`.
 
 ```powershell
-Get-AzureVM | Format-List Name,VmId,Location,ResourceGroupName
+Get-AzureRmVM | Format-List Name,VmId,Location,ResourceGroupName
 ```
 
 ```
