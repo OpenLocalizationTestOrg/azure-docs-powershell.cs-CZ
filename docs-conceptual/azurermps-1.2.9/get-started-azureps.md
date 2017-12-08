@@ -9,12 +9,12 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 11/15/2017
-ms.openlocfilehash: fbd5309167be8cb32aecbfb4661a1789c37d8f2d
-ms.sourcegitcommit: 7a1c08518b180de822c915db99b055b93a1459d7
+ms.date: 08/31/2017
+ms.openlocfilehash: 2cd3fc8e955ae826471dceee79d5e6b70070d416
+ms.sourcegitcommit: e6b7e20bbd04eda51416c56b13f867102b602d1a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="getting-started-with-azure-powershell"></a>Začínáme s prostředím Azure PowerShell
 
@@ -26,15 +26,15 @@ Nejjednodušším způsobem, jak začít, je [spustit Cloud Shell](/azure/cloud-
 
 1. Spusťte Cloud Shell z horního navigačního panelu na webu Azure Portal.
 
-   ![Ikona prostředí](/media/get-started-azureps/shell-icon.png)
+   ![Ikona prostředí](~/media/get-started-azureps/shell-icon.png)
 
 2. Vyberte předplatné, které chcete použít, a vytvořte účet úložiště.
 
-   ![vytvořit účet úložiště](/media/get-started-azureps/storage-prompt.png)
+   ![vytvořit účet úložiště](~/media/get-started-azureps/storage-prompt.png)
 
 Po vytvoření úložiště Cloud Shell v prohlížeči otevře relaci PowerShellu.
 
-![Cloud Shell pro PowerShell](/media/get-started-azureps/cloud-powershell.png)
+![Cloud Shell pro PowerShell](~/media/get-started-azureps/cloud-powershell.png)
 
 Azure PowerShell můžete také nainstalovat a používat místně v relaci PowerShellu.
 
@@ -44,7 +44,7 @@ Prvním krokem je ověření, že máte nainstalovanou nejnovější verzí pros
 
 1. [Nainstalujte prostředí Azure PowerShell](install-azurerm-ps.md).
 
-2. Chcete-li ověřit, že instalace proběhla úspěšně, spusťte z příkazového řádku příkaz `Get-Module AzureRM -ListAvailable`.
+2. Chcete-li ověřit, že instalace proběhla úspěšně, spusťte z příkazového řádku příkaz `Get-Module AzureRM`.
 
 ## <a name="log-in-to-azure"></a>Přihlaste se k Azure.
 
