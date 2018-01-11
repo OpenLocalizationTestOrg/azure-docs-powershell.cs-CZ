@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/05/2017
-ms.openlocfilehash: 7a01957040be7c0498ef4f0e9b8f7297119221a5
-ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
+ms.openlocfilehash: c11e4503c07b0a0c4a71021bc511da723098188e
+ms.sourcegitcommit: 42bfd513fe646494d3d9eb0cfc35b049f7e1fbb7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="using-experimental-azure-powershell-modules"></a>Používání experimentálních modulů Azure PowerShellu
 
@@ -26,12 +26,7 @@ Pro usnadnění experimentování vytváříme nové moduly Azure PowerShellu, k
 
 Tyto moduly je možné nainstalovat vedle stávajících modulů Azure PowerShellu. Názvy rutin se zkrátily, aby se zajistily kratší názvy a zamezilo se konfliktům názvů s existujícími rutinami, které nejsou experimentální.
 
-Experimentální moduly se řídí následujícími zásadami vytváření názvů:
-
-- AzureRM.Compute.Experiments
-- AzureRM.Websites.Experiments
-
-Tyto zásady vytváření názvů jsou podobné pojmenování modulů ve verzi Preview: `AzureRM.*.Preview`. Moduly ve verzi Preview se liší od experimentálních modulů. Moduly ve verzi Preview implementují nové funkce služeb Azure, které jsou dostupné pouze jako nabídka verze Preview. Moduly ve verzi Preview nahrazují existující moduly Azure PowerShellu a používají stejné názvy rutin a parametrů.
+Experimentální moduly se řídí následujícími zásadami vytváření názvů: `AzureRM.*.Experiments`. Tyto zásady vytváření názvů jsou podobné pojmenování modulů ve verzi Preview: `AzureRM.*.Preview`. Moduly ve verzi Preview se liší od experimentálních modulů. Moduly ve verzi Preview implementují nové funkce služeb Azure, které jsou dostupné pouze jako nabídka verze Preview. Moduly ve verzi Preview nahrazují existující moduly Azure PowerShellu a používají stejné názvy rutin a parametrů.
 
 ## <a name="how-to-install-an-experimental-module"></a>Instalace experimentálního modulu
 
@@ -42,10 +37,10 @@ Find-Module AzureRM.*.Experiments
 ```
 
 ```Output
-Version    Name                                Repository           Description
--------    ----                                ----------           -----------
-1.0.0      AzureRM.Websites.Experiments        PSGallery            Create and deploy web applications using Azure Ap...
-1.0.25     AzureRM.Compute.Experiments         PSGallery            Azure Compute experiments for VM creation
+Version Name                         Repository Description
+------- ----                         ---------- -----------
+1.0.25  AzureRM.Compute.Experiments  PSGallery  Azure Compute experiments for VM creation
+1.0.0   AzureRM.Websites.Experiments PSGallery  Create and deploy web applications using Azure App Services.
 ```
 
 Pokud chcete nainstalovat experimentální modul, použijte následující příkazy z relace PowerShellu se zvýšenými oprávněními:
@@ -74,7 +69,7 @@ Vylepšení jádra se považují za „zdravý rozum“ a při implementaci těc
 
 - Kratší názvy – Zahrnuje to názvy rutin (například `New-AzureRmVM` => `New-AzVm`) i názvy parametrů (například `-ResourceGroupName` => `-Rg`). Pro zajištění kompatibility se „starými“ rutinami používejte aliasy. Zadávejte _zpětně kompatibilní_ sady parametrů.
 
-- Inteligentní výchozí hodnoty – Vytvářejte inteligentní výchozí hodnoty, které vyplní požadované informace. Například:
+- Inteligentní výchozí hodnoty – Vytvářejte inteligentní výchozí hodnoty, které vyplní požadované informace. Příklad:
   - Skupina prostředků
   - Umístění
   - Závislé prostředky
@@ -101,30 +96,3 @@ Například scénář Vytvoření webové aplikace může zahrnovat přepínač 
 - Výchozí velikost – Velikosti prostředků můžou být pro uživatele matoucí, protože řada poskytovatelů prostředků používá různé názvy (například Standard\_DS1\_v2 nebo S1). Většinu uživatelů však více zajímají náklady. Proto je vhodné definovat univerzální velikosti na základě cenového plánu. Uživatelé si můžou zvolit konkrétní velikost nebo nechat Azure PowerShell vybrat _nejlepší možnost_ podle rozpočtu na prostředky.
 
 - Formát výstupu – Azure PowerShell v současné době vrací objekty `PSObject` s velmi omezeným výstupem konzoly. Azure PowerShell může potřebovat zobrazit uživateli určité informace související s použitými inteligentními výchozími hodnotami.
-
-## <a name="try-using-the-experiments"></a>Vyzkoušejte vytváření experimentů
-
-### <a name="install"></a>Instalace
-
-```powershell
-Install-Module AzureRM.Compute.Experiments
-```
-
-### <a name="create-a-vm"></a>Vytvoření virtuálního počítače
-
-```powershell
-$job = New-AzVm -Name MyVm -AsJob
-Receive-Job $job
-```
-
-### <a name="send-us-feedback"></a>Odeslání vašeho názoru
-
-```powershell
-Send-Feedback
-```
-
-### <a name="uninstall-the-experimental-modules"></a>Odinstalace experimentálních modulů
-
-```powershell
-Uninstall-Module AzureRM.Compute.Experiments
-```
