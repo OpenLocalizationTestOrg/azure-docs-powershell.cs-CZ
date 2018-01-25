@@ -29,6 +29,9 @@
           href: 'https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-powershell-sas-token'
     - name: "Poznámky k\_verzi"
       href: release-notes-azureps.md
+      items:
+        - name: Rozbíjející změny v Azure PowerShell 3.x
+          href: migration-guide.3.0.0.md
 - name: Ukázkové skripty
   items:
     - name: Virtuální počítače s Linuxem
