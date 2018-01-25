@@ -9,41 +9,39 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/06/2017
-ms.openlocfilehash: 94b39c18acaca7a4b17b5207feed025442665acc
-ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
+ms.date: 01/12/2018
+ms.openlocfilehash: 64a86dfd4af7f3f0a91501e9a096ff190f7100cb
+ms.sourcegitcommit: d320fd5a2f468445c9e5aaa8d28dc363ece12ffc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="install-and-configure-azure-powershell-on-macos-and-linux"></a>Instalace a konfigurace Azure PowerShellu v systémech macOS a Linux
 
-Nyní je možné nainstalovat PowerShell 6 (beta) a Azure PowerShell na jiných platformách než Windows.
-Proces instalace Azure PowerShellu v systému macOS a Linux se neliší od Windows, ale je potřeba nejdřív nainstalovat PowerShell 6 (beta).
+Nyní je možné nainstalovat PowerShell Core v6 a Azure PowerShell na jiných platformách než Windows.
+Proces instalace Azure PowerShellu v systému macOS a Linux se neliší od Windows, ale je potřeba nejdřív nainstalovat PowerShell Core v6.
 
 > [!NOTE]
 
-> V tuto chvíli jsou PowerShell 6 (beta) i PowerShell Azure pro .NET Core stále ve verzi beta.
+> V tuto chvíli jsou PowerShell Core v6 i PowerShell Azure pro .NET Core stále ve verzi beta.
 > Podpora pro tyto produkty je omezená. Pokud máte problémy nebo zjistíte chyby, zaznamenejte prosím problémy v GitHubu.
 >
-> * [Problémy PowerShellu 6 (beta)](https://github.com/PowerShell/PowerShell/issues)
+> * [Problémy PowerShellu Core v6](https://github.com/PowerShell/PowerShell/issues)
 > * [Problémy Azure PowerShellu](https://github.com/azure/azure-docs-powershell/issues)
 
-## <a name="step-1-install-powershell-6-beta"></a>Krok 1: Instalace PowerShellu 6 (beta)
+## <a name="step-1-install-powershell-core-v6"></a>Krok 1: Instalace PowerShellu Core v6
 
-Proces instalace PowerShellu 6 (beta) se liší v závislosti na cílovém operačním systému.
-I když je možné nainstalovat PowerShell 6 (beta) ve Windows, tento článek se zaměřuje na systémy macOS a Linux. Pokud chcete používat Azure PowerShell ve Windows, přečtěte si téma o [instalaci](./install-azurerm-ps.md) ve Windows.
+Proces instalace PowerShellu Core v6 se liší v závislosti na cílovém operačním systému.
+I když je možné nainstalovat PowerShell Core v6 ve Windows, tento článek se zaměřuje na systémy macOS a Linux. Pokud chcete používat Azure PowerShell ve Windows, přečtěte si téma o [instalaci](./install-azurerm-ps.md) ve Windows.
 
-K instalaci **PowerShellu 6** (beta) v systému macOS nebo Linux potřebujete:
+Instalace **PowerShellu Core v6** v Linuxu nebo macOS se liší v závislosti na linuxové distribuci a verzi operačního systému.
+Podrobné pokyny najdete v následujícím článku:
 
-1. Získat PowerShell pro konkrétní operační systém a verzi z [GitHubu](https://github.com/powershell/powershell#get-powershell)
-2. Postupovat podle pokynů k instalaci
-   - [Linux](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md)
-   - [macOS](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#macos-1012)
+- [Instalace PowerShellu Core v macOS a Linuxu](/powershell/scripting/setup/installing-powershell-core-on-macos-and-linux)
 
 ## <a name="step-2-install-azure-powershell-for-net-core"></a>Krok 2: Instalace Azure PowerShellu pro .NET Core
 
-PowerShell 6 (beta) se dodává s již nainstalovaným modulem PowerShellGet. To usnadňuje instalaci libovolného modulu, který se publikuje v Galerii prostředí PowerShell. Pokud chcete nainstalovat Azure PowerShell, otevřete novou relaci PowerShellu a spusťte následující příkaz:
+PowerShell Core v6 se dodává s už nainstalovaným modulem PowerShellGet. To usnadňuje instalaci libovolného modulu, který se publikuje v Galerii prostředí PowerShell. Pokud chcete nainstalovat Azure PowerShell, otevřete novou relaci PowerShellu a spusťte následující příkaz:
 
 ```powershell
 Install-Module AzureRM.NetCore
@@ -55,6 +53,7 @@ Jakmile je modul nainstalovaný, je potřeba modul načíst do relace PowerShell
 
 ```powershell
 Import-Module AzureRM.Netcore
+Import-Module AzureRM.Profile.Netcore
 ```
 
 Po dokončení importu můžete otestovat nově nainstalovaný modul pokusem o přihlášení do Azure pomocí následujícího příkazu:
@@ -78,7 +77,7 @@ Moduly Azure PowerShellu pro .NET Standard jsou stále ve vývoji. Tyto moduly n
 * Rutiny na úrovni správy pro služby Azure s využitím rozhraní Resource Manageru a Správy služeb.
   - Virtuální počítač
   - App Service (Websites)
-  - SQL Database
+  - Databáze SQL
   - Úložiště
   - Síť
 
