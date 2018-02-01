@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 7b7177609ef9104525f173f468d44610b4ad1fe9
-ms.sourcegitcommit: db7f0ad39036bf60985ab7bf991b2d41fb34019f
+ms.openlocfilehash: 0e560332c87fdcc8b7365f2271de24481003a4d6
+ms.sourcegitcommit: 72f56597f0329d35779a3ea4ccea6293f0fd2502
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/27/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-and-configure-azure-powershell"></a>Instalace a konfigurace Azure Powershellu
 
@@ -114,8 +114,7 @@ Get-Module AzureRM -list | Select-Object Name,Version,Path
 
 Pokud máte nasazení, která používají model nasazení Classic, můžete nainstalovat verzi správy služeb Azure PowerShellu. Další informace najdete v tématu popisujícím [instalaci modulu správy služeb Azure PowerShellu](/powershell/azure/servicemanagement/install-azure-ps). Moduly Azure a AzureRM sdílejí společné závislosti. Pokud používáte moduly Azure i AzureRM, měli byste nainstalovat stejnou verzi obou balíčků.
 
-<a id="update-azps"></a>
-### <a name="updating-to-a-new-version-of-azure-powershell"></a>Aktualizace na novou verzi Azure PowerShellu
+### <a id="update-azps"></a>Aktualizace na novou verzi Azure PowerShellu
 
 Pokud máte nainstalovanou předchozí verzi Azure PowerShellu, která obsahuje modul správy služby, může se zobrazit následující chyba:
 

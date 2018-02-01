@@ -623,7 +623,7 @@ Set-AzureRmADUser [other required parameters] -Password $SecureStringVariable
 
 ### <a name="type-namespaceattributes"></a>**Typ NamespaceAttributes**
 - Byly odstraněny následující vlastnosti
-    - Enabled
+    - Povoleno
     - Status
    
 ```powershell
@@ -661,7 +661,7 @@ $queue = Get-AzureRmServiceBusQueue <parameters>
    
 ### <a name="type-topicattribute"></a>**Typ TopicAttribute**
 - Následující vlastnosti jsou označeny jako zastaralé:
-    - Location
+    - Umístění
     - IsExpress
     - IsAnonymousAccessible
     - FilteringMessagesBeforePublishing

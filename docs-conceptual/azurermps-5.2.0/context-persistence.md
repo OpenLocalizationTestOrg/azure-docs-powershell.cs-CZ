@@ -11,10 +11,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
 ms.openlocfilehash: 8ef20796b64b16c78a653e293a57d5e752d89710
-ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
+ms.sourcegitcommit: 72f56597f0329d35779a3ea4ccea6293f0fd2502
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="persisting-user-logins-across-powershell-sessions"></a>Zachování přihlášení uživatele napříč relacemi PowerShellu
 
@@ -83,7 +83,7 @@ PS C:\> Set-AzureRMContext -Subscription "Contoso Subscription 1" -Name "Contoso
 
 Předchozí příklad přidá nový kontext s cílem Contoso Subscription 1 s použitím vašich aktuálních přihlašovacích údajů. Nový kontext se pojmenuje Contoso1. Pokud pro kontext nezadáte název, použije se výchozí název vycházející z ID účtu a ID předplatného.
 
-Pokud chcete přejmenovat existující kontext, použijte rutinu `Rename-AzureRmContext`. Například:
+Pokud chcete přejmenovat existující kontext, použijte rutinu `Rename-AzureRmContext`. Příklad:
 
 ```powershell
 PS C:\> Rename-AzureRmContext '[user1@contoso.org; 123456-7890-1234-564321]` 'Contoso2'
@@ -91,7 +91,7 @@ PS C:\> Rename-AzureRmContext '[user1@contoso.org; 123456-7890-1234-564321]` 'Co
 
 Tento příklad přejmenuje kontext s automaticky nastaveným názvem `[user1@contoso.org; 123456-7890-1234-564321]` na jednodušší název Contoso2. Rutiny určené pro správu kontextů také používají dokončování pomocí tabulátoru umožňující rychlý výběr kontextu.
 
-Pokud chcete nakonec odebrat kontext, použijte rutinu `Remove-AzureRmContext`.  Například:
+Pokud chcete nakonec odebrat kontext, použijte rutinu `Remove-AzureRmContext`.  Příklad:
 
 ```powershell
 PS C:\> Remove-AzureRmContext Contoso2
