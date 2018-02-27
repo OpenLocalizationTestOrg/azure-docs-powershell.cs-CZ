@@ -37,6 +37,8 @@
       items:
         - name: Používání experimentálních modulů
           href: using-experimental-modules.md
+        - name: Úlohy PowerShellu
+          href: using-psjobs.md
     - name: "Poznámky k\_verzi"
       href: release-notes-azureps.md
       items:
