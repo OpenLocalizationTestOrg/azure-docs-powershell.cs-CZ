@@ -37,7 +37,9 @@
   "git_repository_url_open_to_public_contributors": "https://github.com/azure/azure-docs-powershell.cs-CZ",
   "skip_source_output_uploading": false,
   "enable_incremental_build": true,
-  "contribution_branch_mappings": {},
+  "contribution_branch_mappings": {
+		       "live-sxs": "live"
+  },
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
