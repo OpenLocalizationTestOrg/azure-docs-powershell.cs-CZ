@@ -1,6 +1,6 @@
 ---
-title: "Používání experimentálních modulů Azure PowerShellu"
-description: "Seznamte se s filozofií a využitím experimentálních modulů Azure PowerShellu."
+title: Používání experimentálních modulů Azure PowerShellu
+description: Seznamte se s filozofií a využitím experimentálních modulů Azure PowerShellu.
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -11,10 +11,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/05/2017
 ms.openlocfilehash: c11e4503c07b0a0c4a71021bc511da723098188e
-ms.sourcegitcommit: 20af779cd523c758d40e23d60eb989a4ef982d5c
+ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-experimental-azure-powershell-modules"></a>Používání experimentálních modulů Azure PowerShellu
 

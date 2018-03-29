@@ -1,6 +1,6 @@
 ---
-title: "Zadávání dotazů na prostředky Azure a formátování výsledků | Dokumentace Microsoftu"
-description: "Zde se dozvíte, jak zadávat dotazy na prostředky v Azure a jak formátovat výsledky."
+title: Zadávání dotazů na prostředky Azure a formátování výsledků | Dokumentace Microsoftu
+description: Zde se dozvíte, jak zadávat dotazy na prostředky v Azure a jak formátovat výsledky.
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -11,14 +11,14 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
 ms.openlocfilehash: 93a031ce90352286bb1a5e01dc65e6db7cbe5c7e
-ms.sourcegitcommit: 20af779cd523c758d40e23d60eb989a4ef982d5c
+ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="querying-for-azure-resources"></a>Zadávání dotazů na prostředky Azure
 
-Dotazování v prostředí PowerShell můžete dokončit s použitím integrovaných rutin. V prostředí PowerShell mají názvy rutin tvar  **_sloveso-podstatné jméno_**. Rutiny používající sloveso  **_Get_**  jsou rutiny pro dotazování. Rutiny s podstatnými jmény jsou typy prostředků Azure, se kterými se pracuje prostřednictvím rutin se slovesy.
+Dotazování v prostředí PowerShell můžete dokončit s použitím integrovaných rutin. V prostředí PowerShell mají názvy rutin tvar  **_sloveso-podstatné jméno_**. Rutiny používající sloveso **_Get_** jsou rutiny pro dotazování. Rutiny s podstatnými jmény jsou typy prostředků Azure, se kterými se pracuje prostřednictvím rutin se slovesy.
 
 
 ## <a name="selecting-simple-properties"></a>Výběr jednoduchých vlastností

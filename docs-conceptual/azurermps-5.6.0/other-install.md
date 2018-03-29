@@ -1,6 +1,6 @@
 ---
-title: "Další způsoby instalace prostředí Azure PowerShell | Dokumentace Microsoftu"
-description: "Postup při instalaci prostředí Azure PowerShell s použitím balíčku MSI nebo instalačního programu webové platformy."
+title: Další způsoby instalace prostředí Azure PowerShell | Dokumentace Microsoftu
+description: Postup při instalaci prostředí Azure PowerShell s použitím balíčku MSI nebo instalačního programu webové platformy.
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -11,10 +11,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/06/2017
 ms.openlocfilehash: 8a88cce312b4cca002c342c04e1f97b966ae3d2f
-ms.sourcegitcommit: 20af779cd523c758d40e23d60eb989a4ef982d5c
+ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="other-installation-methods"></a>Jiné metody instalace
 
