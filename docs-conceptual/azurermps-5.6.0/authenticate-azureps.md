@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: 1af5aeffb8e87e916df3e2440a84805935136c0f
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.openlocfilehash: f07dee0eed106e39879d58ae06ff08b787faa531
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="log-in-with-azure-powershell"></a>Přihlášení s využitím prostředí Azure PowerShell
 
@@ -22,7 +22,7 @@ Prostředí Azure PowerShell podporuje několik způsobů přihlášení. Nejjed
 
 ## <a name="interactive-log-in"></a>Interaktivní přihlášení
 
-1. Zadejte `Login-AzureRmAccount`. Zobrazí se dialogové okno s výzvou k zadání přihlašovacích údajů Azure.
+1. Zadejte `Connect-AzureRmAccount`. Zobrazí se dialogové okno s výzvou k zadání přihlašovacích údajů Azure.
 
 2. Zadejte e-mailovou adresu a heslo, které jsou spojené s vaším účtem. Azure přihlašovací údaje ověří, uloží je a pak zavře okno.
 
@@ -35,7 +35,7 @@ Instanční objekty umožňují vytvořit neinteraktivní účty, pomocí který
 2. Přihlaste se pomocí instančního objektu.
 
     ```powershell
-    Login-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
+    Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
     ```
 
     Pokud chcete zjistit svou hodnotu TenantId, interaktivně se přihlaste a pak z předplatného zjistěte hodnotu TenantId.
@@ -64,7 +64,7 @@ Další informace o MSI najdete v tématu [Použití identity spravované služb
 Azure Cloud Services poskytují různá prostředí, která dodržují vládní nařízení různých zemí týkající se manipulace s daty. Pokud se váš účet Azure nachází v jednom z cloudů pro státní správu, musíte při přihlášení zadat prostředí. Pokud máte účet Azure například v cloudu v Číně, přihlásíte pomocí tohoto příkazu:
 
 ```powershell
-Login-AzureRmAccount -EnvironmentName AzureChinaCloud
+Connect-AzureRmAccount -Environment AzureChinaCloud
 ```
 
 Seznam dostupných prostředí zobrazíte spuštěním tohoto příkazu:

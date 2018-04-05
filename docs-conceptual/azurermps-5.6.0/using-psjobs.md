@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/11/2017
-ms.openlocfilehash: 0a445a7db84c8deb6518b826b4096983669c5961
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.openlocfilehash: dfc1efa752c9c9fa42ad5904adacd83c2dc333b8
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="running-cmdlets-in-parallel-using-powershell-jobs"></a>Paralelní spouštění rutin s využitím úloh PowerShellu
 
@@ -23,7 +23,7 @@ Prostředí Azure PowerShell je silně závislé na síťových voláních do Az
 
 ## <a name="context-persistence-and-psjobs"></a>Trvalost kontextu a úlohy PS
 
-Úlohy PS běží v samostatných procesech. To znamená, že s úlohami, které vytvoříte, je potřeba správně sdílet informace o připojeních Azure. Při připojení vašeho účtu Azure k relaci PowerShellu pomocí `Login-AzureRmAccount` můžete předat úloze kontext.
+Úlohy PS běží v samostatných procesech. To znamená, že s úlohami, které vytvoříte, je potřeba správně sdílet informace o připojeních Azure. Při připojení vašeho účtu Azure k relaci PowerShellu pomocí `Connect-AzureRmAccount` můžete předat úloze kontext.
 
 ```powershell
 $creds = Get-Credential
