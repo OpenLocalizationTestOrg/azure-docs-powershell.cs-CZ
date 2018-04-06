@@ -9,12 +9,12 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/17/2017
-ms.openlocfilehash: 0c1500a8748a3aa4546c6ce1e8d16a635b056edb
-ms.sourcegitcommit: b256bf48e15ee98865de0fae50e7b81878b03a54
+ms.date: 03/27/2018
+ms.openlocfilehash: 993c9570b7fe81e5be68b8d82943f2135aed2337
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="install-and-configure-azure-powershell"></a>Instalace a konfigurace Azure Powershellu
 
@@ -25,21 +25,30 @@ Preferovanou metodu instalace je instalace Azure PowerShellu z Galerie prostřed
 Instalace položek z Galerie prostředí PowerShell vyžaduje modul PowerShellGet. Ujistěte se, že máte vhodnou verzi modulu PowerShellGet a další požadavky na systém. Spuštěním následujícího příkazu zjistěte, jestli máte PowerShellGet v systému nainstalovaný.
 
 ```powershell
-Get-Module PowerShellGet -list | Select-Object Name,Version,Path
+Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
 Zobrazený výstup by měl vypadat přibližně takto:
 
-```
+```Output
 Name          Version Path
 ----          ------- ----
+Name          Version Path
+----          ------- ----
+PowerShellGet 1.6.0   C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.6.0\PowerShellGet.psd1
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
+```
+
+Potřebujete PowerShellGet verze 1.1.2.0 nebo novější. Pokud chcete PowerShellGet aktualizovat, použijte následující příkaz:
+
+```powershell
+Install-Module PowerShellGet -Force
 ```
 
 Pokud nemáte modul PowerShellGet nainstalovaný, přečtěte si v tomto článku část [Jak získat modul PowerShellGet](#how-to-get-powershellget).
 
 > [!NOTE]
-> Použití modulu PowerShellGet vyžaduje zásadu spouštění, která umožňuje spouštět skripty. Další informace o zásadě spouštění Powershellu najdete v tématu popisujícím [zásady spouštění](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies).
+> Použití modulu PowerShellGet vyžaduje zásadu spouštění, která umožňuje spouštět skripty. Další informace o zásadě spouštění Powershellu najdete v tématu popisujícím [zásady spouštění](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 ## <a name="step-2-install-azure-powershell"></a>Krok 2: Instalace Azure PowerShellu
 
@@ -47,12 +56,12 @@ Instalace Azure PowerShellu z Galerie prostředí PowerShell vyžaduje zvýšen�
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM
+Install-Module -Name AzureRM -AllowClobber
 ```
 
 Ve výchozím nastavení není galerie prostředí PowerShell nakonfigurovaná pro PowerShellGet jako důvěryhodné úložiště. Při prvním použití PSGallery se zobrazí tato výzva:
 
-```
+```Output
 Untrusted repository
 
 You are installing the modules from an untrusted repository. If you trust this repository, change
@@ -75,7 +84,7 @@ Pokud máte nainstalovanou předchozí verzi Azure PowerShellu, může se zobraz
 Jakmile je modul nainstalovaný, je potřeba modul načíst do relace PowerShellu. Toto byste měli udělat v normální relaci PowerShellu, a nikoli v relaci se zvýšenými oprávněními. Moduly se načítají pomocí rutiny `Import-Module` následujícím způsobem:
 
 ```powershell
-Import-Module AzureRM
+Import-Module -Name AzureRM
 ```
 
 ## <a name="next-steps"></a>Další kroky
@@ -100,7 +109,7 @@ Další informace o použití Azure PowerShellu najdete v následujících člá
 I když vám doporučujeme upgradovat na nejnovější verzi co možná nejdříve, podporuje se několik verzí Azure PowerShellu. Pokud chcete zjistit nainstalovanou verzi Azure PowerShellu, spusťte z příkazového řádku příkaz `Get-Module AzureRM`.
 
 ```powershell
-Get-Module AzureRM -list | Select-Object Name,Version,Path
+Get-Module AzureRM -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
 ### <a name="support-for-classic-deployment-methods"></a>Podpora metod nasazení Classic
@@ -111,7 +120,7 @@ Pokud máte nasazení, která používají model nasazení Classic, můžete nai
 
 Pokud máte nainstalovanou předchozí verzi Azure PowerShellu, která obsahuje modul správy služby, může se zobrazit následující chyba:
 
-```
+```Output
 PackageManagement\Install-Package : A command with name 'Get-AzureStorageContainerAcl' is already
 available on this system. This module 'Azure.Storage' may override the existing commands. If you
 still want to install this module 'Azure.Storage', use -AllowClobber parameter.
@@ -127,7 +136,7 @@ Jak uvádí chybová zpráva, musíte modul nainstalovat pomocí parametru -Allo
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM -AllowClobber
+Install-Module -Name AzureRM -AllowClobber
 ```
 
 Další informace najdete v tématu nápovědy k rutině [Install-Module](https://msdn.microsoft.com/powershell/reference/5.1/PowerShellGet/install-module).
@@ -144,7 +153,7 @@ Install-Module -Name AzureRM -RequiredVersion 1.2.9
 Do relace PowerShellu se dá načíst jenom jedna verze modulu. Pokud chcete importovat konkrétní verzi rutin AzureRM, musíte otevřít nové okno PowerShellu a použít příkaz `Import-Module`:
 
 ```powershell
-Import-Module AzureRM -RequiredVersion 1.2.9
+Import-Module -Name AzureRM -RequiredVersion 1.2.9
 ```
 
 > [!NOTE]

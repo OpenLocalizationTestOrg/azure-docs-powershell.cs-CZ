@@ -9,12 +9,12 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/31/2017
-ms.openlocfilehash: 0e560332c87fdcc8b7365f2271de24481003a4d6
-ms.sourcegitcommit: 72f56597f0329d35779a3ea4ccea6293f0fd2502
+ms.date: 03/27/2018
+ms.openlocfilehash: 13dd8973cd28c1763aee19fbea067758053deb7d
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="install-and-configure-azure-powershell"></a>Instalace a konfigurace Azure Powershellu
 
@@ -28,7 +28,7 @@ Preferovanou metodu instalace je instalace Azure PowerShellu z Galerie prostřed
 Instalace položek z Galerie prostředí PowerShell vyžaduje modul PowerShellGet. Ujistěte se, že máte vhodnou verzi modulu PowerShellGet a další požadavky na systém. Spuštěním následujícího příkazu zjistěte, jestli máte PowerShellGet v systému nainstalovaný.
 
 ```powershell
-Get-Module PowerShellGet -list | Select-Object Name,Version,Path
+Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
 Zobrazený výstup by měl vypadat přibližně takto:
@@ -36,7 +36,16 @@ Zobrazený výstup by měl vypadat přibližně takto:
 ```Output
 Name          Version Path
 ----          ------- ----
+Name          Version Path
+----          ------- ----
+PowerShellGet 1.6.0   C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.6.0\PowerShellGet.psd1
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
+```
+
+Potřebujete PowerShellGet verze 1.1.2.0 nebo novější. Pokud chcete PowerShellGet aktualizovat, použijte následující příkaz:
+
+```powershell
+Install-Module PowerShellGet -Force
 ```
 
 Pokud nemáte modul PowerShellGet nainstalovaný, přečtěte si v tomto článku část [Jak získat modul PowerShellGet](#how-to-get-powershellget).
@@ -50,7 +59,7 @@ Instalace Azure PowerShellu z Galerie prostředí PowerShell vyžaduje zvýšen�
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM -AllowClobber
+Install-Module -Name AzureRM -AllowClobber
 ```
 
 Ve výchozím nastavení není galerie prostředí PowerShell nakonfigurovaná pro PowerShellGet jako důvěryhodné úložiště. Při prvním použití PSGallery se zobrazí tato výzva:
@@ -78,7 +87,7 @@ Pokud máte nainstalovanou předchozí verzi Azure PowerShellu, může se zobraz
 Jakmile je modul nainstalovaný, je potřeba modul načíst do relace PowerShellu. Toto byste měli udělat v normální relaci PowerShellu, a nikoli v relaci se zvýšenými oprávněními. Moduly se načítají pomocí rutiny `Import-Module` následujícím způsobem:
 
 ```powershell
-Import-Module AzureRM
+Import-Module -Name AzureRM
 ```
 
 ## <a name="next-steps"></a>Další kroky
@@ -107,7 +116,7 @@ Pokud v nástroji narazíte na jakékoli chyby, přidejte problém v části [Is
 I když vám doporučujeme upgradovat na nejnovější verzi co možná nejdříve, podporuje se několik verzí Azure PowerShellu. Pokud chcete zjistit nainstalovanou verzi Azure PowerShellu, spusťte z příkazového řádku příkaz `Get-Module AzureRM`.
 
 ```powershell
-Get-Module AzureRM -list | Select-Object Name,Version,Path
+Get-Module AzureRM -ListAvailable | Select-Object -Property Name,Version,Path
 ```
 
 ### <a name="support-for-classic-deployment-methods"></a>Podpora metod nasazení Classic
@@ -134,7 +143,7 @@ Jak uvádí chybová zpráva, musíte modul nainstalovat pomocí parametru -Allo
 
 ```powershell
 # Install the Azure Resource Manager modules from the PowerShell Gallery
-Install-Module AzureRM -AllowClobber
+Install-Module -Name AzureRM -AllowClobber
 ```
 
 Další informace najdete v tématu nápovědy k rutině [Install-Module](https://msdn.microsoft.com/powershell/reference/5.1/PowerShellGet/install-module).
@@ -151,7 +160,7 @@ Install-Module -Name AzureRM -RequiredVersion 1.2.9
 Do relace PowerShellu se dá načíst jenom jedna verze modulu. Pokud chcete importovat konkrétní verzi rutin AzureRM, musíte otevřít nové okno PowerShellu a použít příkaz `Import-Module`:
 
 ```powershell
-Import-Module AzureRM -RequiredVersion 1.2.9
+Import-Module -Name AzureRM -RequiredVersion 1.2.9
 ```
 
 > [!NOTE]

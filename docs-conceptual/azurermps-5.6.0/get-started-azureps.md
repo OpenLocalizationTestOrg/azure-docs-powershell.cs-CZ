@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 11/15/2017
-ms.openlocfilehash: 24eb3cf1a58ac87d437d3471639cd9c8cec4070e
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.openlocfilehash: 12446697e57cc0a76b94309c2338239c16c7f580
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="getting-started-with-azure-powershell"></a>Začínáme s prostředím Azure PowerShell
 
@@ -50,9 +50,9 @@ Prvním krokem je ověření, že máte nainstalovanou nejnovější verzí pros
 
 Interaktivní přihlášení:
 
-1. Zadejte `Login-AzureRmAccount`. Zobrazí se dialogové okno s výzvou k zadání přihlašovacích údajů Azure. Možnost '-EnvironmentName' umožňuje přihlásit se ke službě Azure China nebo Azure Germany.
+1. Zadejte `Connect-AzureRmAccount`. Zobrazí se dialogové okno s výzvou k zadání přihlašovacích údajů Azure. Možnost -Environment umožňuje přihlásit se ke službě Azure China nebo Azure Germany.
 
-   Příklad: Login-AzureRmAccount -EnvironmentName AzureChinaCloud
+   např. Connect-AzureRmAccount -Environment AzureChinaCloud.
 
 2. Zadejte e-mailovou adresu a heslo, které jsou spojené s vaším účtem. Azure přihlašovací údaje ověří, uloží je a pak zavře okno.
 

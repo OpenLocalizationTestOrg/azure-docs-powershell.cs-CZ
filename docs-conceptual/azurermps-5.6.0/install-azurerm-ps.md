@@ -9,18 +9,17 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/31/2017
-ms.openlocfilehash: 1a1a2e3d69252c8461284e6ec8e26fa838e773f7
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.date: 03/27/2018
+ms.openlocfilehash: a10cb9496ff6822c6f4c10ab336dd21c85084da8
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="install-and-configure-azure-powershell"></a>Instalace a konfigurace Azure Powershellu
 
-Tento článek vysvětluje kroky instalace modulů Azure PowerShell v prostředí Windows.  
-Pokud chcete Azure PowerShell použít v systému macOS nebo Linux, přečtěte si tento článek:  
-[Instalace a konfigurace Azure PowerShellu v systémech macOS a Linux](install-azurermps-maclinux.md).
+Tento článek vysvětluje kroky instalace modulů Azure PowerShell v prostředí Windows.
+Pokud chcete používat Azure PowerShell v systému macOS nebo Linux, přečtěte si článek o [instalaci a konfiguraci Azure PowerShellu v systému macOS a Linux](install-azurermps-maclinux.md).
 
 Preferovanou metodu instalace je instalace Azure PowerShellu z Galerie prostředí PowerShell.
 
@@ -37,9 +36,14 @@ Zobrazený výstup by měl vypadat přibližně takto:
 ```Output
 Name          Version Path
 ----          ------- ----
+Name          Version Path
+----          ------- ----
+PowerShellGet 1.6.0   C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.6.0\PowerShellGet.psd1
 PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
 ```
-Kromě toho možná budete chtít aktualizovat PowerShellGet pomocí následujícího příkazu:
+
+Potřebujete PowerShellGet verze 1.1.2.0 nebo novější. Pokud chcete PowerShellGet aktualizovat, použijte následující příkaz:
+
 ```powershell
 Install-Module PowerShellGet -Force
 ```
